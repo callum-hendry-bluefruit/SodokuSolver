@@ -1,13 +1,13 @@
-﻿Build started 29/03/2016 02:54:28 PM.
-     1>Project "C:\CallumProjects\Greenhouse-GetGoogletest - NOT GIT\SodokuSolver\msvc\SodokuSolverLibrary.vcxproj" on node 2 (Build target(s)).
+﻿Build started 29/03/2016 04:32:51 PM.
+     1>Project "C:\CallumProjects\SodokuSolver\msvc\SodokuSolverLibrary.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\SodokuSolverLibrary\\" /Fd"Debug\SodokuSolverLibrary\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\source\Hiker.cpp
-         Hiker.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\SodokuSolverLibrary\\" /Fd"Debug\SodokuSolverLibrary\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\source\SodokuSolver.cpp
+         SodokuSolver.cpp
        Lib:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"C:\CallumProjects\Greenhouse-GetGoogletest - NOT GIT\SodokuSolver\msvc\Debug\SodokuSolverLibrary.lib" /NOLOGO Debug\SodokuSolverLibrary\Hiker.obj
-         SodokuSolverLibrary.vcxproj -> C:\CallumProjects\Greenhouse-GetGoogletest - NOT GIT\SodokuSolver\msvc\Debug\SodokuSolverLibrary.lib
-     1>Done Building Project "C:\CallumProjects\Greenhouse-GetGoogletest - NOT GIT\SodokuSolver\msvc\SodokuSolverLibrary.vcxproj" (Build target(s)).
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"C:\CallumProjects\SodokuSolver\msvc\Debug\SodokuSolverLibrary.lib" /NOLOGO Debug\SodokuSolverLibrary\SodokuSolver.obj
+         SodokuSolverLibrary.vcxproj -> C:\CallumProjects\SodokuSolver\msvc\Debug\SodokuSolverLibrary.lib
+     1>Done Building Project "C:\CallumProjects\SodokuSolver\msvc\SodokuSolverLibrary.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.52
+Time Elapsed 00:00:01.03

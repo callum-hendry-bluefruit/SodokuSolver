@@ -1,13 +1,9 @@
-﻿Build started 29/03/2016 02:42:35 PM.
-     1>Project "C:\CallumProjects\Greenhouse-GetGoogletest - NOT GIT\SodokuSolver\gtest\msvc\gtest.vcxproj" on node 2 (Build target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I.. /I..\include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _MBCS /Gm- /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\gtest\\" /Fd"Debug\gtest\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt "..\src\gtest-all.cc"
-         gtest-all.cc
-       Lib:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"Debug\gtestd.lib" /NOLOGO "Debug\gtest\gtest-all.obj"
-         gtest.vcxproj -> C:\CallumProjects\Greenhouse-GetGoogletest - NOT GIT\SodokuSolver\gtest\msvc\Debug\gtestd.lib
-     1>Done Building Project "C:\CallumProjects\Greenhouse-GetGoogletest - NOT GIT\SodokuSolver\gtest\msvc\gtest.vcxproj" (Build target(s)).
+﻿Build started 29/03/2016 03:19:49 PM.
+     1>Project "C:\CallumProjects\SodokuSolver\gtest\msvc\gtest.vcxproj" on node 2 (Build target(s)).
+     1>Lib:
+         gtest.vcxproj -> C:\CallumProjects\SodokuSolver\gtest\msvc\Debug\gtestd.lib
+     1>Done Building Project "C:\CallumProjects\SodokuSolver\gtest\msvc\gtest.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:03.87
+Time Elapsed 00:00:00.28

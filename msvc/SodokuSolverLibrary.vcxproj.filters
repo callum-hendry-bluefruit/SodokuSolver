@@ -15,12 +15,12 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\source\Hiker.cpp">
+    <ClCompile Include="..\source\SodokuSolver.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\source\Hiker.h">
+    <ClInclude Include="..\source\SodokuSolver.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
