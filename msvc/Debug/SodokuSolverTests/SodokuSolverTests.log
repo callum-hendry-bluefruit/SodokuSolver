@@ -1,13 +1,14 @@
-﻿Build started 29/03/2016 04:32:52 PM.
+﻿Build started 30/03/2016 04:33:32 PM.
      1>Project "C:\CallumProjects\SodokuSolver\msvc\SodokuSolverTests.vcxproj" on node 3 (Build target(s)).
      1>Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\CallumProjects\SodokuSolver\msvc\Debug\SodokuSolverTests.exe" /INCREMENTAL /NOLOGO ..\gtest\msvc\Debug\gtestd.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\CallumProjects\SodokuSolver\msvc\Debug\SodokuSolverTests.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\CallumProjects\SodokuSolver\msvc\Debug\SodokuSolverTests.lib" /MACHINE:X86 Debug\SodokuSolverTests\tests.SodokuSolver.obj
          C:\CallumProjects\SodokuSolver\gtest\msvc\Debug\gtestd.lib
          C:\CallumProjects\SodokuSolver\gtest\msvc\Debug\gtest_main.lib
          C:\CallumProjects\SodokuSolver\msvc\Debug\SodokuSolverLibrary.lib
+         LINK : C:\CallumProjects\SodokuSolver\msvc\Debug\SodokuSolverTests.exe not found or not built by the last incremental link; performing full link
          SodokuSolverTests.vcxproj -> C:\CallumProjects\SodokuSolver\msvc\Debug\SodokuSolverTests.exe
      1>Done Building Project "C:\CallumProjects\SodokuSolver\msvc\SodokuSolverTests.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:01.47
+Time Elapsed 00:00:01.09
