@@ -20,6 +20,9 @@ public:
 
 	void m_init_or_reset_possible_number_array();
 	std::array<int, 9> m_possible_numbers;
+
+	void m_remove_possible_numbers_by_row(int);
+	void m_remove_possible_numbers_by_column(int);
 };
 
 
