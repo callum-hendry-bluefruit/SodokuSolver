@@ -66,3 +66,22 @@ void SodokuSolverClass::m_remove_possible_numbers_by_column(int current_column)
 		}
 	}
 }
+
+void SodokuSolverClass::m_remove_possible_numbers_by_grid(int current_row, int current_column)
+{
+	if ((current_row <= 2) && (current_column <= 2))
+	{
+		int row_to_check = 0;
+		for (int i = 0; i <= 2; i++) //Controls which row and columns are being checked, hence smaller i limit
+		{
+			for (int i2 = 0; i2 <= 8; i2++) //checks current location on grid for any number in m_possible_numbers
+			{
+				if (m_sodoku_grid[row_to_check][i] == m_possible_numbers[i2])
+				{
+					m_possible_numbers[i2] = 0;
+				}
+			}
+			row_to_check += 1;
+		}
+	}
+}

@@ -23,6 +23,7 @@ public:
 
 	void m_remove_possible_numbers_by_row(int);
 	void m_remove_possible_numbers_by_column(int);
+	void m_remove_possible_numbers_by_grid(int, int);
 };
 
 
