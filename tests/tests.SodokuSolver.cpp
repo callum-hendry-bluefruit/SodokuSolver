@@ -167,3 +167,82 @@ TEST(testSodokuSolver, remove_possible_numbers_based_on_3x3_grids_in_sodoku_grid
 
 	EXPECT_EQ(expected_possible_numbers_array, removeNumbers.m_possible_numbers);
 }
+
+TEST(testSodokuSolver, add_first_non_zero_possible_number_to_grid)
+{
+	SodokuSolverClass addFirstPossible;
+
+	std::array<std::array<int, 9>, 9> example_CSV_file = { {
+		{ 0, 0, 7, 0, 0, 1, 3, 0, 0 },
+		{ 3, 0, 0, 0, 5, 0, 6, 0, 0 },
+		{ 5, 0, 8, 0, 3, 0, 0, 0, 4 },
+		{ 0, 8, 0, 0, 6, 0, 9, 0, 0 },
+		{ 7, 0, 0, 0, 0, 0, 0, 0, 6 },
+		{ 0, 0, 4, 0, 1, 0, 0, 7, 0 },
+		{ 2, 0, 0, 0, 8, 0, 4, 0, 3 },
+		{ 0, 0, 6, 0, 7, 0, 0, 0, 8 },
+		{ 0, 0, 5, 9, 0, 0, 7, 0, 0 },
+		} };
+
+	std::array<std::array<int, 9>, 9> expected_sodoku_grid = example_CSV_file;
+	expected_sodoku_grid[0][0] = 4;
+
+	int row = 0;
+	int column = 0;
+
+	addFirstPossible.m_initSodokuGrid();
+	addFirstPossible.m_mock_read_csv(example_CSV_file);
+	addFirstPossible.m_init_or_reset_possible_number_array();
+
+	addFirstPossible.m_remove_possible_numbers_by_row(row);
+	addFirstPossible.m_remove_possible_numbers_by_column(column);
+	addFirstPossible.m_remove_possible_numbers_by_grid(row, column);
+
+	addFirstPossible.m_add_first_possible_number(row, column);
+
+	EXPECT_EQ(expected_sodoku_grid, addFirstPossible.m_sodoku_grid);
+}
+
+TEST(testSodokuSolver, solve_3x3_grid_in_top_left_corner)
+{
+	SodokuSolverClass solveFirstGrid;
+
+	std::array<std::array<int, 9>, 9> example_CSV_file = { {
+		{ 0, 0, 7, 0, 0, 1, 3, 0, 0 },
+		{ 3, 0, 0, 0, 5, 0, 6, 0, 0 },
+		{ 5, 0, 8, 0, 3, 0, 0, 0, 4 },
+		{ 0, 8, 0, 0, 6, 0, 9, 0, 0 },
+		{ 7, 0, 0, 0, 0, 0, 0, 0, 6 },
+		{ 0, 0, 4, 0, 1, 0, 0, 7, 0 },
+		{ 2, 0, 0, 0, 8, 0, 4, 0, 3 },
+		{ 0, 0, 6, 0, 7, 0, 0, 0, 8 },
+		{ 0, 0, 5, 9, 0, 0, 7, 0, 0 },
+		} };
+
+	std::array<std::array<int, 9>, 9> expected_sodoku_grid = { {
+		{ 4, 2, 7, 0, 0, 1, 3, 0, 0 },
+		{ 3, 1, 9, 0, 5, 0, 6, 0, 0 },
+		{ 5, 6, 8, 0, 3, 0, 0, 0, 4 },
+		{ 0, 8, 0, 0, 6, 0, 9, 0, 0 },
+		{ 7, 0, 0, 0, 0, 0, 0, 0, 6 },
+		{ 0, 0, 4, 0, 1, 0, 0, 7, 0 },
+		{ 2, 0, 0, 0, 8, 0, 4, 0, 3 },
+		{ 0, 0, 6, 0, 7, 0, 0, 0, 8 },
+		{ 0, 0, 5, 9, 0, 0, 7, 0, 0 },
+		} };
+
+	solveFirstGrid.m_initSodokuGrid();
+	solveFirstGrid.m_mock_read_csv(example_CSV_file);
+	solveFirstGrid.m_init_or_reset_possible_number_array();
+
+	solveFirstGrid.m_solve_grid();
+
+	EXPECT_EQ(expected_sodoku_grid, solveFirstGrid.m_sodoku_grid);
+}
+
+TEST(testSodokuSolver, solve_entire_grid)
+{
+	//Run program via main.cpp to test this. Must complete grid on paper in the same manner
+	//the program would; will take a few hours. Opting to code the program then run it via
+	//main.cpp and cout the result, then confirm if it is correct or not.
+}

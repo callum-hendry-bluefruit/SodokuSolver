@@ -24,6 +24,10 @@ public:
 	void m_remove_possible_numbers_by_row(int);
 	void m_remove_possible_numbers_by_column(int);
 	void m_remove_possible_numbers_by_grid(int, int);
+
+	void m_add_first_possible_number(int, int);
+
+	void m_solve_grid();
 };
 
 
