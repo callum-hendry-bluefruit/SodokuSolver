@@ -211,9 +211,11 @@ TEST(testSodokuSolver, solve_3x3_grid_in_top_left_corner)
 		{ 0, 0, 7, 0, 0, 1, 3, 0, 0 },
 		{ 3, 0, 0, 0, 5, 0, 6, 0, 0 },
 		{ 5, 0, 8, 0, 3, 0, 0, 0, 4 },
+
 		{ 0, 8, 0, 0, 6, 0, 9, 0, 0 },
 		{ 7, 0, 0, 0, 0, 0, 0, 0, 6 },
 		{ 0, 0, 4, 0, 1, 0, 0, 7, 0 },
+
 		{ 2, 0, 0, 0, 8, 0, 4, 0, 3 },
 		{ 0, 0, 6, 0, 7, 0, 0, 0, 8 },
 		{ 0, 0, 5, 9, 0, 0, 7, 0, 0 },
@@ -223,9 +225,11 @@ TEST(testSodokuSolver, solve_3x3_grid_in_top_left_corner)
 		{ 4, 2, 7, 0, 0, 1, 3, 0, 0 },
 		{ 3, 1, 9, 0, 5, 0, 6, 0, 0 },
 		{ 5, 6, 8, 0, 3, 0, 0, 0, 4 },
+
 		{ 0, 8, 0, 0, 6, 0, 9, 0, 0 },
 		{ 7, 0, 0, 0, 0, 0, 0, 0, 6 },
 		{ 0, 0, 4, 0, 1, 0, 0, 7, 0 },
+
 		{ 2, 0, 0, 0, 8, 0, 4, 0, 3 },
 		{ 0, 0, 6, 0, 7, 0, 0, 0, 8 },
 		{ 0, 0, 5, 9, 0, 0, 7, 0, 0 },
@@ -235,14 +239,43 @@ TEST(testSodokuSolver, solve_3x3_grid_in_top_left_corner)
 	solveFirstGrid.m_mock_read_csv(example_CSV_file);
 	solveFirstGrid.m_init_or_reset_possible_number_array();
 
-	solveFirstGrid.m_solve_grid();
+	solveFirstGrid.m_solve_grid(2,2);
 
 	EXPECT_EQ(expected_sodoku_grid, solveFirstGrid.m_sodoku_grid);
 }
 
 TEST(testSodokuSolver, solve_entire_grid)
 {
-	//Run program via main.cpp to test this. Must complete grid on paper in the same manner
-	//the program would; will take a few hours. Opting to code the program then run it via
-	//main.cpp and cout the result, then confirm if it is correct or not.
+	SodokuSolverClass solve_grid;
+
+	std::array<std::array<int, 9>, 9> example_CSV_file = { {
+		{ 1, 0, 0, /**/ 0, 0, 7, /**/ 0, 9, 0 },
+		{ 0, 3, 0, /**/ 0, 2, 0, /**/ 0, 0, 8 },
+		{ 0, 0, 9, /**/ 6, 0, 0, /**/ 5, 0, 0 },
+
+		{ 0, 0, 5, /**/ 3, 0, 0, /**/ 9, 0, 0 },
+		{ 0, 1, 0, /**/ 0, 8, 0, /**/ 0, 0, 0 },
+		{ 6, 0, 0, /**/ 0, 0, 4, /**/ 0, 0, 2 },
+
+		{ 3, 0, 0, /**/ 0, 0, 0, /**/ 0, 1, 0 },
+		{ 0, 4, 0, /**/ 0, 0, 0, /**/ 0, 0, 0 },
+		{ 0, 0, 7, /**/ 0, 0, 0, /**/ 3, 0, 7 },
+		} };
+
+	std::array<std::array<int, 9>, 9> expected_sodoku_grid = { {
+		{ 1, 6, 2, /**/ 8, 5, 7, /**/ 4, 9, 3 },
+		{ 5, 3, 4, /**/ 1, 2, 9, /**/ 6, 7, 8 },
+		{ 7, 8, 9, /**/ 6, 4, 3, /**/ 5, 2, 1 },
+
+		{ 4, 7, 5, /**/ 3, 1, 2, /**/ 9, 8, 6 },
+		{ 9, 1, 3, /**/ 5, 8, 6, /**/ 7, 4, 2 },
+		{ 6, 2, 8, /**/ 7, 9, 4, /**/ 1, 3, 5 },
+
+		{ 3, 5, 6, /**/ 4, 7, 8, /**/ 2, 1, 9 },
+		{ 2, 4, 1, /**/ 9, 3, 5, /**/ 8, 6, 7 },
+		{ 8, 9, 7, /**/ 2, 6, 1, /**/ 3, 5, 4 },
+		} };
+
+	solve_grid.m_boot(true, example_CSV_file);
+	EXPECT_EQ(expected_sodoku_grid, solve_grid.m_sodoku_grid);
 }

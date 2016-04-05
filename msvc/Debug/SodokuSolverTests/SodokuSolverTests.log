@@ -1,4 +1,4 @@
-﻿Build started 01/04/2016 02:56:06 PM.
+﻿Build started 05/04/2016 03:43:59 PM.
      1>Project "C:\CallumProjects\SodokuSolver\msvc\SodokuSolverTests.vcxproj" on node 3 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\SodokuSolverTests\\" /Fd"Debug\SodokuSolverTests\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\tests\tests.SodokuSolver.cpp
@@ -13,4 +13,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:03.16
+Time Elapsed 00:00:02.88

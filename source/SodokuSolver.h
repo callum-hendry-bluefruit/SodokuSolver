@@ -11,7 +11,7 @@ int answer();
 class SodokuSolverClass
 {
 public:
-	void m_boot();
+	void m_boot(bool, std::array<std::array<int, 9>, 9>);
 
 	std::array<std::array<int, 9>,9> m_sodoku_grid;
 
@@ -27,7 +27,7 @@ public:
 
 	void m_add_first_possible_number(int, int);
 
-	void m_solve_grid();
+	void m_solve_grid(int, int);
 };
 
 
