@@ -25,7 +25,7 @@ int main()
 		{ 0, 0, 7, /**/ 0, 0, 0, /**/ 3, 0, 7 },
 		} };
 
-	startUpProgram.m_boot(true, mock_csv);
+	startUpProgram.m_boot(true, mock_csv, false);
 
 	cin >> s;
 	return 0;
