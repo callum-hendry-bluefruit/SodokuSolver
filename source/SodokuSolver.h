@@ -13,7 +13,7 @@ class SodokuSolverClass
 public:
 	void m_boot(bool, std::array<std::array<int, 9>, 9>, bool);
 
-	std::array<std::array<int, 9>,9> m_sodoku_grid;
+	std::array<std::array<int, 9>, 9> m_sodoku_grid;
 
 	void m_initSodokuGrid();
 	void m_mock_read_csv(std::array<std::array<int, 9>, 9>);

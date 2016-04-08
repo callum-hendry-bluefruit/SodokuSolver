@@ -31,7 +31,7 @@ void SodokuSolverClass::m_boot(bool use_mock_file, std::array<std::array<int, 9>
 
 	for (int i = 0; i <= 8; i++)
 	{
-		std::cout << "Sodoku Grid Row " << i << ": "; 
+		std::cout << "Sodoku Grid Row " << i << ": ";
 
 		for (int i2 = 0; i2 <= 8; i2++)
 		{
@@ -183,12 +183,13 @@ void SodokuSolverClass::m_remove_possible_numbers_by_grid(int current_row, int c
 
 void SodokuSolverClass::m_add_first_possible_number(int row, int column)
 {
-
-	m_sodoku_grid[row][column] = m_possible_numbers[0]; //Causes vector subscipt out of range - WTF?
-
+	if ((m_possible_numbers.size() != 0) && (m_sodoku_grid[row][column] == 0))
+	{
+		m_sodoku_grid[row][column] = m_possible_numbers[0];
+	}
 }
 
-void SodokuSolverClass::m_solve_grid(int num_of_rows, int num_of_columns) 
+void SodokuSolverClass::m_solve_grid(int num_of_rows, int num_of_columns)
 {
 	//Redundant - use recursive solving instead
 
@@ -207,17 +208,19 @@ void SodokuSolverClass::m_solve_grid(int num_of_rows, int num_of_columns)
 
 void SodokuSolverClass::m_recursive_solving()
 {
-	for (int row = 0; row <= 8; row++)
+	m_recursive_number_addition(0, 0);
+
+	/*for (int row = 0; row <= 8; row++)
 	{
-		for (int column = 0; column <= 8; column++)
-		{
-			m_init_or_reset_possible_number_array();
-			m_remove_possible_numbers_by_row(row);
-			m_remove_possible_numbers_by_column(column);
-			m_remove_possible_numbers_by_grid(row, column);
-			m_recursive_number_addition(row, column);
-		}
+	for (int column = 0; column <= 8; column++)
+	{
+	m_init_or_reset_possible_number_array();
+	m_remove_possible_numbers_by_row(row);
+	m_remove_possible_numbers_by_column(column);
+	m_remove_possible_numbers_by_grid(row, column);
+	m_recursive_number_addition(row, column);
 	}
+	}*/
 }
 
 bool SodokuSolverClass::m_recursive_number_addition(int row, int column)
@@ -229,46 +232,10 @@ bool SodokuSolverClass::m_recursive_number_addition(int row, int column)
 
 	int which_possible_num_to_use = 1;
 
-	int i = 0;
-	bool stop_loop = false;
-	while ((stop_loop == false) && (i <= 8))
+	if (m_sodoku_grid[row][column] == 0)
 	{
-		if ((m_possible_numbers[i] != 0) && (m_sodoku_grid[row][column] == 0))
-		{
-			switch (which_possible_num_to_use)
-			{
-			case (1) :
-					m_sodoku_grid[row][column] = m_possible_numbers[i];
-					stop_loop = true;
-				break;
-
-			case (2) :
-				break;
-
-			case (3) :
-				break;
-
-			case (4) :
-				break;
-
-			case (5) :
-				break;
-
-			case (6) :
-				break;
-
-			case (7) :
-				break;
-
-			case (8) :
-				break;
-
-			case (9) :
-				break;
-			}
-		}
-
-		i++;
+		m_possible_numbers[which_possible_num_to_use];
 	}
+
 	return false;
 }

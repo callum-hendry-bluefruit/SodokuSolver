@@ -8,7 +8,7 @@ using namespace ::std;
 int main()
 {
 	string s;
-	
+
 	SodokuSolverClass startUpProgram;
 
 	std::array<std::array<int, 9>, 9> mock_csv = { {
