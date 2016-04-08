@@ -1,13 +1,14 @@
-﻿Build started 06/04/2016 05:00:45 PM.
-     1>Project "C:\CallumProjects\SodokuSolver\msvc\SodokuSolverLibrary.vcxproj" on node 2 (Build target(s)).
+﻿Build started 07/04/2016 12:23:15 PM.
+     1>Project "D:\CallumProjects\SodokuSolver\msvc\SodokuSolverLibrary.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\SodokuSolverLibrary\\" /Fd"Debug\SodokuSolverLibrary\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\source\SodokuSolver.cpp
+         D:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\SodokuSolverLibrary\\" /Fd"Debug\SodokuSolverLibrary\SodokuSolverLibrary.pdb" /Gd /TP /analyze- /errorReport:prompt ..\source\SodokuSolver.cpp
          SodokuSolver.cpp
+     1>d:\callumprojects\sodokusolver\source\sodokusolver.cpp(250): warning C4717: 'SodokuSolverClass::m_recursive_number_addition': recursive on all control paths, function will cause runtime stack overflow
        Lib:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"C:\CallumProjects\SodokuSolver\msvc\Debug\SodokuSolverLibrary.lib" /NOLOGO Debug\SodokuSolverLibrary\SodokuSolver.obj
-         SodokuSolverLibrary.vcxproj -> C:\CallumProjects\SodokuSolver\msvc\Debug\SodokuSolverLibrary.lib
-     1>Done Building Project "C:\CallumProjects\SodokuSolver\msvc\SodokuSolverLibrary.vcxproj" (Build target(s)).
+         D:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\Lib.exe /OUT:"D:\CallumProjects\SodokuSolver\msvc\Debug\SodokuSolverLibrary.lib" /NOLOGO Debug\SodokuSolverLibrary\SodokuSolver.obj
+         SodokuSolverLibrary.vcxproj -> D:\CallumProjects\SodokuSolver\msvc\Debug\SodokuSolverLibrary.lib
+     1>Done Building Project "D:\CallumProjects\SodokuSolver\msvc\SodokuSolverLibrary.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.79
+Time Elapsed 00:00:00.88

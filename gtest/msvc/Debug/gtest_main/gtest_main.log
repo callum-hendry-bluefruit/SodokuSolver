@@ -1,9 +1,9 @@
-﻿Build started 29/03/2016 03:19:49 PM.
-     1>Project "C:\CallumProjects\SodokuSolver\gtest\msvc\gtest_main.vcxproj" on node 2 (Build target(s)).
+﻿Build started 07/04/2016 10:20:07 AM.
+     1>Project "D:\CallumProjects\SodokuSolver\gtest\msvc\gtest_main.vcxproj" on node 2 (Build target(s)).
      1>Lib:
-         gtest_main.vcxproj -> C:\CallumProjects\SodokuSolver\gtest\msvc\Debug\gtest_main.lib
-     1>Done Building Project "C:\CallumProjects\SodokuSolver\gtest\msvc\gtest_main.vcxproj" (Build target(s)).
+         gtest_main.vcxproj -> D:\CallumProjects\SodokuSolver\gtest\msvc\Debug\gtest_main.lib
+     1>Done Building Project "D:\CallumProjects\SodokuSolver\gtest\msvc\gtest_main.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.11
+Time Elapsed 00:00:00.02

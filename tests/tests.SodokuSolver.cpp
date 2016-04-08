@@ -276,6 +276,6 @@ TEST(testSodokuSolver, solve_entire_grid)
 		{ 8, 9, 7, /**/ 2, 6, 1, /**/ 3, 5, 4 },
 		} };
 
-	//solve_grid.m_boot(true, example_CSV_file, true);
-	//EXPECT_EQ(expected_sodoku_grid, solve_grid.m_sodoku_grid);
+	solve_grid.m_boot(true, example_CSV_file, true);
+	EXPECT_EQ(expected_sodoku_grid, solve_grid.m_sodoku_grid);
 }

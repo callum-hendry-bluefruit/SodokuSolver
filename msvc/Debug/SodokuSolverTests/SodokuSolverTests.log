@@ -1,13 +1,13 @@
-﻿Build started 06/04/2016 05:00:46 PM.
-     1>Project "C:\CallumProjects\SodokuSolver\msvc\SodokuSolverTests.vcxproj" on node 2 (Build target(s)).
+﻿Build started 07/04/2016 12:23:16 PM.
+     1>Project "D:\CallumProjects\SodokuSolver\msvc\SodokuSolverTests.vcxproj" on node 2 (Build target(s)).
      1>Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\CallumProjects\SodokuSolver\msvc\Debug\SodokuSolverTests.exe" /INCREMENTAL /NOLOGO ..\gtest\msvc\Debug\gtestd.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\CallumProjects\SodokuSolver\msvc\Debug\SodokuSolverTests.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\CallumProjects\SodokuSolver\msvc\Debug\SodokuSolverTests.lib" /MACHINE:X86 Debug\SodokuSolverTests\tests.SodokuSolver.obj
-         C:\CallumProjects\SodokuSolver\gtest\msvc\Debug\gtestd.lib
-         C:\CallumProjects\SodokuSolver\gtest\msvc\Debug\gtest_main.lib
-         C:\CallumProjects\SodokuSolver\msvc\Debug\SodokuSolverLibrary.lib
-         SodokuSolverTests.vcxproj -> C:\CallumProjects\SodokuSolver\msvc\Debug\SodokuSolverTests.exe
-     1>Done Building Project "C:\CallumProjects\SodokuSolver\msvc\SodokuSolverTests.vcxproj" (Build target(s)).
+         D:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\CallumProjects\SodokuSolver\msvc\Debug\SodokuSolverTests.exe" /INCREMENTAL /NOLOGO ..\gtest\msvc\Debug\gtestd.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"D:\CallumProjects\SodokuSolver\msvc\Debug\SodokuSolverTests.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\CallumProjects\SodokuSolver\msvc\Debug\SodokuSolverTests.lib" /MACHINE:X86 Debug\SodokuSolverTests\tests.SodokuSolver.obj
+         D:\CallumProjects\SodokuSolver\gtest\msvc\Debug\gtestd.lib
+         D:\CallumProjects\SodokuSolver\gtest\msvc\Debug\gtest_main.lib
+         D:\CallumProjects\SodokuSolver\msvc\Debug\SodokuSolverLibrary.lib
+         SodokuSolverTests.vcxproj -> D:\CallumProjects\SodokuSolver\msvc\Debug\SodokuSolverTests.exe
+     1>Done Building Project "D:\CallumProjects\SodokuSolver\msvc\SodokuSolverTests.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:01.81
+Time Elapsed 00:00:00.49
