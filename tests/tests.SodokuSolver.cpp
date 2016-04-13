@@ -279,3 +279,61 @@ TEST(testSodokuSolver, solve_entire_grid)
 	solve_grid.m_boot(true, example_CSV_file, true);
 	EXPECT_EQ(expected_sodoku_grid, solve_grid.m_sodoku_grid);
 }
+
+TEST(testSodokuSolver, find_unresolved_locations)
+{
+	SodokuSolverClass find_unresolved_locations;
+
+	std::array<std::array<int, 9>, 9> example_CSV_file = { {
+		{ 1, 0, 0, /**/ 0, 0, 7, /**/ 0, 9, 0 },
+		{ 0, 3, 0, /**/ 0, 2, 0, /**/ 0, 0, 8 },
+		{ 0, 0, 9, /**/ 6, 0, 0, /**/ 5, 0, 0 },
+
+		{ 0, 0, 5, /**/ 3, 0, 0, /**/ 9, 0, 0 },
+		{ 0, 1, 0, /**/ 0, 8, 0, /**/ 0, 0, 0 },
+		{ 6, 0, 0, /**/ 0, 0, 4, /**/ 0, 0, 2 },
+
+		{ 3, 0, 0, /**/ 0, 0, 0, /**/ 0, 1, 0 },
+		{ 0, 4, 0, /**/ 0, 0, 0, /**/ 0, 0, 0 },
+		{ 0, 0, 7, /**/ 0, 0, 0, /**/ 3, 0, 7 },
+		} };
+	int expected_row = 0;
+	int expected_column = 1;
+
+	find_unresolved_locations.m_initSodokuGrid();
+	find_unresolved_locations.m_mock_read_csv(example_CSV_file);
+
+	find_unresolved_locations.m_find_unsolved_locations();
+
+	EXPECT_EQ(expected_row, find_unresolved_locations.m_unresolved_row);
+	EXPECT_EQ(expected_column, find_unresolved_locations.m_unresolved_column);
+}
+
+TEST(testSodokuSolver, find_unresolved_locations_on_different_rows)
+{
+	SodokuSolverClass find_unresolved_locations;
+
+	std::array<std::array<int, 9>, 9> example_CSV_file = { {
+		{ 1, 2, 2, /**/ 2, 2, 7, /**/ 2, 9, 2 },
+		{ 0, 3, 0, /**/ 0, 2, 0, /**/ 0, 0, 8 },
+		{ 0, 0, 9, /**/ 6, 0, 0, /**/ 5, 0, 0 },
+
+		{ 0, 0, 5, /**/ 3, 0, 0, /**/ 9, 0, 0 },
+		{ 0, 1, 0, /**/ 0, 8, 0, /**/ 0, 0, 0 },
+		{ 6, 0, 0, /**/ 0, 0, 4, /**/ 0, 0, 2 },
+
+		{ 3, 0, 0, /**/ 0, 0, 0, /**/ 0, 1, 0 },
+		{ 0, 4, 0, /**/ 0, 0, 0, /**/ 0, 0, 0 },
+		{ 0, 0, 7, /**/ 0, 0, 0, /**/ 3, 0, 7 },
+		} };
+	int expected_row = 1;
+	int expected_column = 0;
+
+	find_unresolved_locations.m_initSodokuGrid();
+	find_unresolved_locations.m_mock_read_csv(example_CSV_file);
+
+	find_unresolved_locations.m_find_unsolved_locations();
+
+	EXPECT_EQ(expected_row, find_unresolved_locations.m_unresolved_row);
+	EXPECT_EQ(expected_column, find_unresolved_locations.m_unresolved_column);
+}

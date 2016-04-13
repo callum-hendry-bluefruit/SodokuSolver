@@ -208,34 +208,97 @@ void SodokuSolverClass::m_solve_grid(int num_of_rows, int num_of_columns)
 
 void SodokuSolverClass::m_recursive_solving()
 {
-	m_recursive_number_addition(0, 0);
-
-	/*for (int row = 0; row <= 8; row++)
-	{
-	for (int column = 0; column <= 8; column++)
-	{
-	m_init_or_reset_possible_number_array();
-	m_remove_possible_numbers_by_row(row);
-	m_remove_possible_numbers_by_column(column);
-	m_remove_possible_numbers_by_grid(row, column);
-	m_recursive_number_addition(row, column);
-	}
-	}*/
+	m_recursive_number_addition();
 }
 
-bool SodokuSolverClass::m_recursive_number_addition(int row, int column)
+bool SodokuSolverClass::m_recursive_number_addition()
 {
-	m_init_or_reset_possible_number_array();
-	m_remove_possible_numbers_by_row(row);
-	m_remove_possible_numbers_by_column(column);
-	m_remove_possible_numbers_by_grid(row, column);
+	/* Pseudocode for recursion
+	solve(game):
+	if (game board is full)
+	return SUCCESS
+	else
+	next_square = getNextEmptySquare()
+	for each value that can legally be put in next_square
+	put value in next_square (i.e. modify game state)
+	if (solve(game)) return SUCCESS
+	remove value from next_square (i.e. backtrack to a previous state)
+	return FAILURE
+	*/
 
-	int which_possible_num_to_use = 1;
-
-	if (m_sodoku_grid[row][column] == 0)
+	if (!m_find_unsolved_locations())
 	{
-		m_possible_numbers[which_possible_num_to_use];
+		return true;
 	}
+	else
+	{
+		for (resursive_loop_control = 0; resursive_loop_control <= 8; resursive_loop_control++)
+		{
+			m_init_or_reset_possible_number_array();
+			m_remove_possible_numbers_by_row(m_unresolved_row);
+			m_remove_possible_numbers_by_column(m_unresolved_column);
+			m_remove_possible_numbers_by_grid(m_unresolved_row, m_unresolved_column);
 
-	return false;
+			if (m_possible_numbers.size() == 0)
+			{
+				return false;
+			}
+
+			for (size_t i2 = 0; i2 < m_possible_numbers.size(); i2++)
+			{
+				if (resursive_loop_control == m_possible_numbers[i2])
+				{
+					m_sodoku_grid[m_unresolved_row][m_unresolved_column] = m_possible_numbers[i2];
+
+					if (m_recursive_number_addition())
+					{
+						return true;
+					}
+					m_sodoku_grid[m_unresolved_row][m_unresolved_column] = 0;
+				}
+				else
+				{
+
+				}
+			}
+		}
+		return false;
+	}
+}
+
+bool SodokuSolverClass::m_find_unsolved_locations()
+{
+	bool stop_loop = false;
+	for (int row = 0; row <= 8; row++)
+	{
+		for (int column = 0; column <= 8; column++)
+		{
+			if (m_sodoku_grid[row][column] == 0)
+			{
+				m_unresolved_row = row;
+				m_unresolved_column = column;
+
+				stop_loop = true;
+				break;
+			}
+			else
+			{
+				m_unresolved_row = 99;
+				m_unresolved_column = 99;
+			}
+		}
+
+		if (stop_loop == true)
+		{
+			break;
+		}
+	}
+	if (stop_loop == true)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
 }

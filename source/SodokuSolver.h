@@ -29,8 +29,14 @@ public:
 
 	void m_solve_grid(int, int);
 
+	bool m_find_unsolved_locations();
+	int m_unresolved_row = 0;
+	int m_unresolved_column = 0;
+
 	void m_recursive_solving();
-	bool m_recursive_number_addition(int, int);
+	bool m_recursive_number_addition();
+
+	int resursive_loop_control = 0;
 };
 
 
