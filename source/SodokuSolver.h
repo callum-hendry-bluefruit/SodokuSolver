@@ -35,8 +35,6 @@ public:
 
 	void m_recursive_solving();
 	bool m_recursive_number_addition();
-
-	int resursive_loop_control = 0;
 };
 
 

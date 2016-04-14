@@ -213,57 +213,8 @@ void SodokuSolverClass::m_recursive_solving()
 
 bool SodokuSolverClass::m_recursive_number_addition()
 {
-	/* Pseudocode for recursion
-	solve(game):
-	if (game board is full)
-	return SUCCESS
-	else
-	next_square = getNextEmptySquare()
-	for each value that can legally be put in next_square
-	put value in next_square (i.e. modify game state)
-	if (solve(game)) return SUCCESS
-	remove value from next_square (i.e. backtrack to a previous state)
-	return FAILURE
-	*/
 
-	if (!m_find_unsolved_locations())
-	{
-		return true;
-	}
-	else
-	{
-		for (resursive_loop_control = 0; resursive_loop_control <= 8; resursive_loop_control++)
-		{
-			m_init_or_reset_possible_number_array();
-			m_remove_possible_numbers_by_row(m_unresolved_row);
-			m_remove_possible_numbers_by_column(m_unresolved_column);
-			m_remove_possible_numbers_by_grid(m_unresolved_row, m_unresolved_column);
-
-			if (m_possible_numbers.size() == 0)
-			{
-				return false;
-			}
-
-			for (size_t i2 = 0; i2 < m_possible_numbers.size(); i2++)
-			{
-				if (resursive_loop_control == m_possible_numbers[i2])
-				{
-					m_sodoku_grid[m_unresolved_row][m_unresolved_column] = m_possible_numbers[i2];
-
-					if (m_recursive_number_addition())
-					{
-						return true;
-					}
-					m_sodoku_grid[m_unresolved_row][m_unresolved_column] = 0;
-				}
-				else
-				{
-
-				}
-			}
-		}
-		return false;
-	}
+	return false;
 }
 
 bool SodokuSolverClass::m_find_unsolved_locations()
